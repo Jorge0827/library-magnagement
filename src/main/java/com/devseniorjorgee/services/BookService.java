@@ -36,6 +36,7 @@ public class BookService {
         for (Book book : books) {
             if (book.getIsbn().equals(isbn)) {
                 books.remove(book);
+                return;
             }
         }
         throw new NotFoundException("No se puede eliminar el libro con isbn: " + isbn);
